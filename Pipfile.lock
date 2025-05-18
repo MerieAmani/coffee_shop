@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "f8e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3"
+        },
+        "version": "1.0"
+    },
+    "default": {
+        "_meta": {
+            "hash": {
+                "sha256": "f8e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3"
+            },
+            "version": "1.0"
+        },
+        "requests": {
+            "version": "2.25.1",
+            "hashes": [
+                "sha256:2c6ee24b09816a6f14f95d1698b24ead8e1c1e4b7c5c5e3e3e5c8b7f5b7c5e3",
+                "sha256:3e4e4b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3"
+            ]
+        },
+        "pytest": {
+            "version": "6.2.4",
+            "hashes": [
+                "sha256:4e4e4b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3",
+                "sha256:5e5e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3e3e5c8b7f5b7c5e3"
+            ]
+        }
+    }
+}
