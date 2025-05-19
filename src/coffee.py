@@ -1,27 +1,25 @@
 class Coffee:
-    def __init__(self, name):
-        if not isinstance(name, str) or len(name) < 3 or len(name) > 30: 
-            raise ValueError("Name must be a string with 3 to 30 characters.")
-        self._name = name
-        self._orders = []
+    all_coffees = []
 
-    @property
-    def name(self):
-        return self._name
+    def __init__(self, name):
+        if not isinstance(name, str) or len(name) < 3:
+            raise ValueError("Name must be a string with at least 3 characters.")
+        self.name = name
+        Coffee.all_coffees.append(self)
 
     def orders(self):
-        return self._orders
+        from .order import Order
+        return [order for order in Order.all_orders if order.coffee == self]
 
     def customers(self):
-        return list(set(order.customer for order in self._orders))
+        return list(set(order.customer for order in self.orders()))
 
     def num_orders(self):
-        return len(self._orders)
+        return len(self.orders())
 
     def average_price(self):
-        if not self._orders:
+        orders = self.orders()
+        if not orders:
             return 0
-        return sum(order.price for order in self._orders) / len(self._orders)
-
-    def add_order(self, order):
-        self._orders.append(order) 
+        total_price = sum(order.price for order in orders)
+        return total_price / len(orders)
